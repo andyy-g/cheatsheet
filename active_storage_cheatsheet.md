@@ -16,7 +16,7 @@ In your model, add :
 
 ## 👁 VIEW
 
-* To add a field in yout form :
+* To add a field in your form :
 ```
   <%= form.label :elementname %>
   <%= form.file_field :elementname %>
