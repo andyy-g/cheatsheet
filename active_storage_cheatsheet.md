@@ -16,10 +16,10 @@ In your model, add :
 
 ## 👁 VIEW
 
-* To add a field in your form :
+* To add a field in your form_for :
 ```
-  <%= form.label :elementname %>
-  <%= form.file_field :elementname %>
+  <%= f.label :elementname %>
+  <%= f.file_field :elementname %>
 ```
 * To display the image :
 ```
