@@ -20,7 +20,7 @@
     secret_access_key: <% ENV['AMAZON_SECRET_ACCESS_KEY'] %>
     region: eu-west-3
     bucket: your-bucket-name
- ```
+  ```
  Don't forget the `<% %>` 😉
 * In config/environments/production.rb:42, indicate your service :
   `config.active_storage.service = :amazon`
