@@ -9,6 +9,7 @@
 ## 1️⃣  GIT COMMANDS
 
 * `git checkout -b name-of-your-feature`
+* `git push --set-upstream origin name-of-your-feature`
 * code...
 * `git add name_of_your_modified_file` or `git add --patch` and `y` for the files you want to commit
 
