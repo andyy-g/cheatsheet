@@ -8,10 +8,10 @@
   *Creation of two tables : __active_storage_blobs__ and __active_storage_attachments__*
 * Sign in on your AWS account, create a bucket and get your Access key ID and Secret access key following [this tutorial][tuto active storage]. 
 * Add `gem dotenv-rails` to your Gemfile, bundle install, then create a .env file, put `.env` in your .gitignore, and finally put your API key in your .env file :
-```
-AMAZON_ACCESS_KEY_ID= 'AKIAKOB5SEYHW8APSIYQ'
-AMAZON_SECRET_ACCESS_KEY= 'vCxbJWzclEJCLqZ4zXcSBgT5i9mAQCYMSw1zXyu'
-```
+  ```
+  AMAZON_ACCESS_KEY_ID= 'AKIAKOB5SEYHW8APSIYQ'
+  AMAZON_SECRET_ACCESS_KEY= 'vCxbJWzclEJCLqZ4zXcSBgT5i9mAQCYMSw1zXyu'
+  ```
 * Declare your service in config/storage.yml :
   ```
   amazon:
