@@ -33,20 +33,31 @@
 ## 🔧 MODEL
 
 In your model, add :
-* `has_one_attached :elementname` for one-to-one relationship (each record can have one file attached to it),
-* `has_many_attached :elementname` for one-to-many relationship (each record can have many files attached to it).
+* `has_one_attached :image` for one-to-one relationship (each record can have one file attached to it),
+* `has_many_attached :image` for one-to-many relationship (each record can have many files attached to it).
+
+## 📏 CONTROLLER
+
+To attach the images to your items, in your def create add :
+```ruby
+@item = Item.new(item_params)
+@item.image.attach(params[:item][:image])
+```
 
 ## 👁 VIEW
 
 * To add a field in your form_for :
 ```ruby
-  <%= f.label :elementname %>
-  <%= f.file_field :elementname %>
+  <%= form_for(@item) do |f| %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.submit %>
+  <% end %>
 ```
 * To display the image :
 ```ruby
-<% if @item.elementname.attached? %>
-  <%= image_tag(@item.elementname), alt: 'Element Name' %>
+<% if @item.image.attached? %>
+  <%= image_tag(@item.image), alt: 'Image' %>
 <% end %>
 ```
 
