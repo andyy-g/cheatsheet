@@ -34,7 +34,7 @@
 
 In your model, add :
 * `has_one_attached :image` for one-to-one relationship (each record can have one file attached to it),
-* `has_many_attached :image` for one-to-many relationship (each record can have many files attached to it).
+* `has_many_attached :images` for one-to-many relationship (each record can have many files attached to it).
 
 ## 📏 CONTROLLER
 
