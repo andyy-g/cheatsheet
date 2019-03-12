@@ -16,12 +16,12 @@
   ```
   amazon:
     service: S3
-    access_key_id: <% ENV['AMAZON_ACCESS_KEY_ID'] %>
-    secret_access_key: <% ENV['AMAZON_SECRET_ACCESS_KEY'] %>
+    access_key_id: <%= ENV['AMAZON_ACCESS_KEY_ID'] %>
+    secret_access_key: <%= ENV['AMAZON_SECRET_ACCESS_KEY'] %>
     region: eu-west-3
     bucket: your-bucket-name
   ```
- Don't forget the `<% %>` 😉
+ Don't forget the `<%= %>` 😉
 * In config/environments/production.rb:42, indicate your service :
   `config.active_storage.service = :amazon`
 * Add `gem "aws-sdk-s3", require: false` to your Gemfile and bundle install.
