@@ -57,7 +57,7 @@ To attach the images to your items, in your def create add :
 * To display the image :
 ```ruby
 <% if @item.image.attached? %>
-  <%= image_tag(@item.image), alt: 'Image' %>
+  <%= image_tag(@item.image, alt: 'Image') %>
 <% end %>
 ```
 
