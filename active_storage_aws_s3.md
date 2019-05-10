@@ -34,7 +34,7 @@
 
 In your model, add :
 * `has_one_attached :image` for one-to-one relationship (each record can have one file attached to it),
-* `has_many_attached :image` for one-to-many relationship (each record can have many files attached to it).
+* `has_many_attached :images` for one-to-many relationship (each record can have many files attached to it).
 
 ## 📏 CONTROLLER
 
@@ -54,11 +54,18 @@ To attach the images to your items, in your def create add :
     <%= f.submit %>
   <% end %>
 ```
-* To display the image :
+* To display the image(s) :
 ```ruby
 <% if @item.image.attached? %>
   <%= image_tag(@item.image), alt: 'Image' %>
 <% end %>
 ```
+or
+```
+<% (0...@item.images.count).each |image| %>
+  <%= image_tag(@item.images[image]) %>
+<% end %>
+```
+
 
 [tuto active storage]: https://medium.com/alturasoluciones/setting-up-rails-5-active-storage-with-amazon-s3-3d158cf021ff
