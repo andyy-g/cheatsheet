@@ -61,7 +61,7 @@ To attach the images to your items, in your def create add :
 <% end %>
 ```
 or
-```
+```ruby
 <% (0...@item.images.count).each |image| %>
   <%= image_tag(@item.images[image]) %>
 <% end %>
