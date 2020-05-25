@@ -2,7 +2,8 @@
 
 ## 🌳 HOW MANY BRANCH ?
 
-* master
+* master (deployed to prod app)
+* staging (deployed to staging app)
 * development
 * one branch by feature
 
